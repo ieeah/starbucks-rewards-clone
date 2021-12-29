@@ -1,0 +1,51 @@
+// transitions to the redeem reward carousel
+
+.carousel-fade-enter-active, .carousel-fade-leave-active {
+	transition: opacity .25s;
+}
+.carousel-fade-enter, .carousel-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0;
+}
+
+////////////////////////////////
+
+
+@keyframes denied {
+	0% {
+		background-color: transparent;
+	}
+	65% {
+		background-color: rgba($color: $denied, $alpha: .3);
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
+@keyframes success {
+	0% {
+		background-color: transparent;
+	}
+	65% {
+		background-color: rgba($color: $accent, $alpha: .3);
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
+@keyframes action_msg {
+	0% {
+		left: 2.5%;
+		font-size: 1.3rem;
+	}
+	70% {
+		left: 2.5%;
+		font-size: 1rem;
+	}
+	100% {
+		top: -22%;
+		left: 2.5%;
+		font-size: 1rem;
+	}
+}

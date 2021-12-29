@@ -1,0 +1,100 @@
+header {
+	width: 100%;
+	height: $header-height;
+	background-color: $clear;
+	font-weight: 700;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	nav {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+
+		.left,
+		.right {
+			width: 50%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		.left {
+			position: relative;
+			a {
+				position: absolute;
+				left: -90px;
+			}
+
+			ul {
+				height: 100%;
+				display: flex;
+				align-items: center;
+
+				li {
+					list-style-type: none;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					cursor: pointer;
+					border-bottom: 7px solid transparent;
+					margin-right: $sp-4;
+
+					&:hover {
+						color: $accent;
+					}
+					&.active {
+					border-bottom: 7px solid $accent;
+						&:hover {
+							color: initial;
+							cursor: default;
+						}
+					}
+				}
+			}
+		}
+		.right {
+			justify-content: end;
+			a,
+			.btn {
+				font-size: .9rem;
+			}
+			a {
+				text-decoration: none;
+				color: $accent-dark;
+				
+				&:visited {
+					color: $accent-dark;
+				}
+				i {
+				font-size: 1rem;
+				margin-right: $sp-1;
+				}
+				&:hover:not(.btn) {
+					color: $accent;
+				}
+			}
+			.cta {
+				margin-left: $sp-6;
+				.btn {
+					margin-right: $sp-2;
+					font-weight: 700;
+					border: 1px solid $accent-dark;
+				}
+				.btn.dark {
+					background-color: $accent-dark;
+					color: $clear;
+				}
+			}
+		}
+	}
+	.nav_title {
+		$height: 50px;
+		height: $height;
+		background-color: $secondary-color;
+		color: $clear;
+		line-height: $height;
+		@include bottom_shadow;
+	}
+}

@@ -1,0 +1,33 @@
+// colors
+$primary-color: #ffffff;
+$secondary-color: #1E3932;
+$secondary-clear: #066040;
+$third-color: #D4E9E2;
+$fourth-color: #f1f8f6;
+$fifth-color: #f2f0eb;
+$terms-bg: #f9f9f9;
+
+$clear: white;
+$accent-dark: black;
+$accent: #00754a;
+$accent-link: #00a862;
+$accent-yellow: #dbb97b;
+$denied: rgb(216, 38, 38);
+
+
+
+//spacing
+$base-unit: 10px;
+
+$sp-1: calc($base-unit / 2);
+$sp-2: $base-unit;
+$sp-3: calc($base-unit * 1.5);
+$sp-4: calc($base-unit * 2);
+$sp-5: calc($base-unit * 3);
+$sp-5: calc($base-unit * 3.5);
+$sp-6: calc($base-unit * 4);
+
+$header-height: 100px;
+$header-title-height: 50px;
+// font families
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
