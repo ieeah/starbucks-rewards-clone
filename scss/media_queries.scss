@@ -12,6 +12,12 @@
 		.mobile_join {
 			display: block;
 		}
+		.nav_title {
+			.current_page {
+				font-size: .85rem;
+				letter-spacing: 1px;
+			}
+		}
 	}
 	main {
 		.hero_banner {
@@ -25,9 +31,9 @@
 				align-items: center;
 				h3 {
 					text-align: center;
-					width: 39%;
+					width: 29%;
 					font-size: 1.8rem;
-					font-weight: 600;
+					font-weight: 700;
 				}
 				.hero_subtitle {
 					font-size: 1rem;
@@ -40,6 +46,103 @@
 					display: none;
 					&.mobile {
 						display: block;
+					}
+				}
+			}
+		}
+		.getting_started {
+			padding-block: $sp-5;
+			.content {
+				flex-direction: column;
+				.step {
+					.list_number {
+						margin-inline:-$sp-4;
+					}
+					flex-direction: row;
+					margin-bottom: $sp-5;
+					.card_body {
+						text-align: left;
+						margin-left: $sp-5;
+						h5 {
+							font-size: 1rem;
+							&:not(.mobile) {
+								display: none;
+							}
+						}
+						p {
+							font-weight: 500;
+							&:not(.mobile) {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.redeem {
+			.select_reward {
+				width: 100%;
+				.rewards {
+					width: 100%;
+				}
+			}
+			.carousel {
+				padding-block: 0;
+			}
+			.transition_container {
+				width: 100%;
+				height: 600px;
+				.slider {
+					width: 100%;
+					flex-direction: column;
+					align-items: center;
+					.poster {
+						width: 100%;
+						margin-bottom: $sp-6;
+						img {
+							height: 100%;
+						}
+					}
+					.details {
+						text-align: center;
+						width: 100%;
+						h4 {
+							font-size: 1.05rem;
+						}
+						p {
+							width: 97%;
+							font-size: .9rem;
+						}
+					}
+				}
+			}
+		}
+		.extras {
+			padding-block: $sp-5;
+			.section_heading {
+				.section_subtitle {
+					width: 100%;
+					padding-inline: $sp-1;
+					font-weight: 500;
+				}
+			}
+			.content {
+				flex-direction: column;
+				.step {
+					.list_number {
+						margin-bottom: 0;
+					}
+					flex-direction: row;
+					margin-bottom: $sp-5;
+					.card_body {
+						text-align: left;
+						margin-left: $sp-5;
+						h5 {
+							font-size: 1rem;
+						}
+						p {
+							font-weight: 500;
+						}
 					}
 				}
 			}
@@ -65,7 +168,7 @@
 	}
 	//utilities
 	.container_full {
-	width: 98%;
+	width: 97%;
 	margin-inline: auto;
 	}
 }

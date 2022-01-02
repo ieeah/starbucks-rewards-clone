@@ -377,7 +377,6 @@ header .nav_title .container_full .mobile_join:hover {
 .redeem .carousel .transition_container {
   position: relative;
   width: 600px;
-  height: 210px;
 }
 .redeem .carousel .slider {
   display: flex;
@@ -706,6 +705,10 @@ footer .sub_footer .copyright {
   header .mobile_join {
     display: block;
   }
+  header .nav_title .current_page {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
 
   main .hero_banner {
     padding-block: 200px calc(160vh - 350px);
@@ -720,9 +723,9 @@ footer .sub_footer .copyright {
   }
   main .hero_banner .content h3 {
     text-align: center;
-    width: 39%;
+    width: 29%;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
   }
   main .hero_banner .content .hero_subtitle {
     font-size: 1rem;
@@ -736,6 +739,99 @@ footer .sub_footer .copyright {
   }
   main .hero_banner .content a.btn.mobile {
     display: block;
+  }
+  main .getting_started {
+    padding-block: 35px;
+  }
+  main .getting_started .content {
+    flex-direction: column;
+  }
+  main .getting_started .content .step {
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+  main .getting_started .content .step .list_number {
+    margin-inline: -20px;
+  }
+  main .getting_started .content .step .card_body {
+    text-align: left;
+    margin-left: 35px;
+  }
+  main .getting_started .content .step .card_body h5 {
+    font-size: 1rem;
+  }
+  main .getting_started .content .step .card_body h5:not(.mobile) {
+    display: none;
+  }
+  main .getting_started .content .step .card_body p {
+    font-weight: 500;
+  }
+  main .getting_started .content .step .card_body p:not(.mobile) {
+    display: none;
+  }
+  main .redeem .select_reward {
+    width: 100%;
+  }
+  main .redeem .select_reward .rewards {
+    width: 100%;
+  }
+  main .redeem .carousel {
+    padding-block: 0;
+  }
+  main .redeem .transition_container {
+    width: 100%;
+    height: 600px;
+  }
+  main .redeem .transition_container .slider {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .redeem .transition_container .slider .poster {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  main .redeem .transition_container .slider .poster img {
+    height: 100%;
+  }
+  main .redeem .transition_container .slider .details {
+    text-align: center;
+    width: 100%;
+  }
+  main .redeem .transition_container .slider .details h4 {
+    font-size: 1.05rem;
+  }
+  main .redeem .transition_container .slider .details p {
+    width: 97%;
+    font-size: 0.9rem;
+  }
+  main .extras {
+    padding-block: 35px;
+  }
+  main .extras .section_heading .section_subtitle {
+    width: 100%;
+    padding-inline: 5px;
+    font-weight: 500;
+  }
+  main .extras .content {
+    flex-direction: column;
+  }
+  main .extras .content .step {
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+  main .extras .content .step .list_number {
+    margin-bottom: 0;
+  }
+  main .extras .content .step .card_body {
+    text-align: left;
+    margin-left: 35px;
+  }
+  main .extras .content .step .card_body h5 {
+    font-size: 1rem;
+  }
+  main .extras .content .step .card_body p {
+    font-weight: 500;
   }
 
   *.mobile {
@@ -751,7 +847,7 @@ footer .sub_footer .copyright {
   }
 
   .container_full {
-    width: 98%;
+    width: 97%;
     margin-inline: auto;
   }
 }

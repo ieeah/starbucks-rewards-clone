@@ -53,7 +53,7 @@
 				<div class="nav_title">
 					<div class="container_full">
 						<div class="current_page">
-							STARBUCKS {{pages[activePage].page}}
+							STARBUCKS© {{pages[activePage].page}}
 						</div>
 							<button class="mobile_join btn" href="/join_app">
 								join in the app
@@ -99,18 +99,27 @@
 							<div class="list_number">1</div>
 							<div class="card_body">
 								<h5>Create an account</h5>
+								<h5 class="d-none mobile">Download the Starbucks app</h5>
 								<p>
 									To get started, <a href="" target="_blank">join now</a>. You can also <a href=""
 										target="_blank">join in the App</a> to get access to the full range of starbucks Rewards
 									benefits
+								</p>
+								<p class="d-none mobile">
+									<a href="https://starbucks.app.link/VLa2I3inh9">
+										Join in the app
+									</a> 
+									to get access to the full range of Starbucks® Rewards benefits.
+									You can also 
+									<a href="https://www.starbucks.com/account/create">join online</a> .
 								</p>
 							</div>
 						</div>
 						<div class="step">
 							<div class="list_number">2</div>
 							<div class="card_body">
-								<h5>Order and pay how you'd like</h5>
-								<p>
+								<h5 class="mobile">Order and pay how you'd like</h5>
+								<p class="mobile">
 									Use cash, credit/debit card or save some time and pay right trough the app. You'll collect Stars
 									all ways. <a href="" target="_blank">Learn how</a>
 								</p>
@@ -119,8 +128,8 @@
 						<div class="step">
 							<div class="list_number">3</div>
 							<div class="card_body">
-								<h5>Earn Stars, get Rewards</h5>
-								<p>
+								<h5 class="mobile">Earn Stars, get Rewards</h5>
+								<p class="mobile">
 									As you earn Stars, you can redeem them for Rewards--like free food, drinks and more. Start
 									redeeming with as little as 25 Stars!
 								</p>
@@ -138,13 +147,15 @@
 					</div>
 					<div class="carousel">
 						<transition-group name="carousel-fade" tag="div" class="transition_container">
-							<div v-for="(item, i) in carousel" class="slider" v-if="active_carousel === i" :key="`slide_${i}`">
-								<div class="poster">
-									<img :src="carousel[i].img" alt="">
-								</div>
-								<div class="details">
-									<h4>{{carousel[active_carousel].title}}</h4>
-									<p>{{carousel[active_carousel].text}}</p>
+							<div class="slider_container" key="container">
+								<div v-for="(item, i) in carousel" class="slider" v-if="active_carousel === i" :key="`slide_${i}`">
+									<div class="poster">
+										<img :src="carousel[i].img" alt="">
+									</div>
+									<div class="details">
+										<h4>{{carousel[active_carousel].title}}</h4>
+										<p>{{carousel[active_carousel].text}}</p>
+									</div>
 								</div>
 							</div>
 						</transition-group>

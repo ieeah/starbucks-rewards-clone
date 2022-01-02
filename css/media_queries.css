@@ -1,66 +1,17 @@
-@media screen and (max-width: 767px) {
-  header .left .brand_logo {
-    left: 10px;
-  }
-  header .left ul {
-    margin-left: 100px;
-  }
-  header .mobile_join {
-    display: block;
-  }
+/* Error: Undefined variable.
+ *    ,
+ * 54 |             padding-block: $sp-5;
+ *    |                            ^^^^^
+ *    '
+ *   scss\media_queries.scss 54:19  root stylesheet */
 
-  main .hero_banner {
-    padding-block: 200px calc(160vh - 350px);
-    background-position: 63% 750px;
-    background-repeat: no-repeat;
-    background-size: 250%;
-  }
-  main .hero_banner .content {
-    height: fit-content;
-    text-align: center;
-    align-items: center;
-  }
-  main .hero_banner .content h3 {
-    text-align: center;
-    width: 39%;
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  main .hero_banner .content .hero_subtitle {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  main .hero_banner .content .hero_subtitle:not(.mobile) {
-    display: none;
-  }
-  main .hero_banner .content a.btn {
-    display: none;
-  }
-  main .hero_banner .content a.btn.mobile {
-    display: block;
-  }
-
-  *.mobile {
-    display: block;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 54 \2502              padding-block: $sp-5;\d\a    \2502                             ^^^^^\a    \2575 \a   scss\\media_queries.scss 54:19  root stylesheet";
 }
-@media screen and (max-width: 1280px) {
-  header .left .brand_logo {
-    left: 10px;
-  }
-  header .left ul {
-    margin-left: 100px;
-  }
-
-  .container_full {
-    width: 98%;
-    margin-inline: auto;
-  }
-}
-@media screen and (min-width: 768px) {
-  header .mobile_join {
-    display: none;
-  }
-}
-
-/*# sourceMappingURL=media_queries.css.map */
