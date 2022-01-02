@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap");
+.d-none {
+  display: none;
+}
+
 .container_full {
   width: 70%;
   margin-inline: auto;
@@ -206,7 +210,6 @@ header nav .right .cta {
 header nav .right .cta .btn {
   margin-right: 10px;
   font-weight: 700;
-  border: 1px solid black;
 }
 header nav .right .cta .btn.dark {
   background-color: black;
@@ -219,11 +222,30 @@ header .nav_title {
   line-height: 50px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
+header .nav_title .container_full {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav_title .container_full .current_page {
+  text-transform: uppercase;
+}
+header .nav_title .container_full .mobile_join {
+  color: white;
+  border-color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+header .nav_title .container_full .mobile_join:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 .hero_banner {
   height: 800px;
   background-color: #D4E9E2;
-  margin-top: 150px;
+  padding-top: 150px;
   background-image: url(../assets/xl-hero-desktop_2021.png);
   background-size: cover;
   background-position: center;
@@ -255,6 +277,9 @@ header .nav_title {
   font-weight: 600;
   text-decoration: none;
   margin-block: 15px 5px;
+}
+.hero_banner .content a.btn.mobile {
+  display: none;
 }
 
 .getting_started {
@@ -669,6 +694,71 @@ footer .sub_footer .copyright {
   color: #696969;
   font-weight: 500;
   margin-top: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  header .left .brand_logo {
+    left: 10px;
+  }
+  header .left ul {
+    margin-left: 100px;
+  }
+  header .mobile_join {
+    display: block;
+  }
+
+  main .hero_banner {
+    padding-block: 200px calc(160vh - 350px);
+    background-position: 63% 750px;
+    background-repeat: no-repeat;
+    background-size: 250%;
+  }
+  main .hero_banner .content {
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+  }
+  main .hero_banner .content h3 {
+    text-align: center;
+    width: 39%;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  main .hero_banner .content .hero_subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  main .hero_banner .content .hero_subtitle:not(.mobile) {
+    display: none;
+  }
+  main .hero_banner .content a.btn {
+    display: none;
+  }
+  main .hero_banner .content a.btn.mobile {
+    display: block;
+  }
+
+  *.mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 1280px) {
+  header .left .brand_logo {
+    left: 10px;
+  }
+  header .left ul {
+    margin-left: 100px;
+  }
+
+  .container_full {
+    width: 98%;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .mobile_join {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

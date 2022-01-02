@@ -1,0 +1,85 @@
+// mobile
+@media screen and (max-width: 767px) {
+	header {
+		.left {
+			.brand_logo {
+				left: 10px;
+			}
+			ul {
+				margin-left: 100px;
+			}
+		}
+		.mobile_join {
+			display: block;
+		}
+	}
+	main {
+		.hero_banner {
+			padding-block: 200px calc(160vh - 350px);
+			background-position: 63% 750px;
+			background-repeat: no-repeat;
+			background-size: 250%;
+			.content {
+				height: fit-content;
+				text-align: center;
+				align-items: center;
+				h3 {
+					text-align: center;
+					width: 39%;
+					font-size: 1.8rem;
+					font-weight: 600;
+				}
+				.hero_subtitle {
+					font-size: 1rem;
+					font-weight: 600;
+					&:not(.mobile) {
+						display: none;
+					}
+				}
+				a.btn {
+					display: none;
+					&.mobile {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	*.mobile {
+		display: block;
+	}
+
+}
+
+
+@media screen and (max-width: 1280px) {
+	header {
+		.left {
+			.brand_logo {
+				left: 10px;
+			}
+			ul {
+				margin-left: 100px;
+			}
+		}
+	}
+	//utilities
+	.container_full {
+	width: 98%;
+	margin-inline: auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		.mobile_join {
+			display: none;
+		}
+	}
+
+	
+}
+
+//tablet
+
+

@@ -22,7 +22,7 @@ body {
 .hero_banner {
 	height: 800px;
 	background-color: $third-color;
-	margin-top: calc($header-height + $header-title-height);
+	padding-top: calc($header-height + $header-title-height);
 	background-image: url(../assets/xl-hero-desktop_2021.png);
 	background-size: cover;
 	background-position: center;
@@ -52,6 +52,9 @@ body {
 			font-weight: 600;
 			text-decoration: none;
 			margin-block: $sp-3 $sp-1;
+			&.mobile {
+				display: none;
+			}
 		}
 	}
 }
@@ -494,4 +497,8 @@ footer {
 		}
 	}
 }
+
+@import './media_queries.scss';
+
+
 

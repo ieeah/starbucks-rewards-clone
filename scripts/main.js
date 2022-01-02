@@ -287,6 +287,10 @@ const app = new Vue({
 				document.activeElement.blur();
 			} ,2000);
 		},
+
+		setActivePage(i) {
+			this.activePage = i;
+		},
 	},
 
 });

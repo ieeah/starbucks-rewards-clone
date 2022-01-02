@@ -17,7 +17,7 @@
 			<header>
 				<nav class="container_full">
 					<div class="left">
-						<a href="">
+						<a class="brand_logo" href="">
 							<svg xmlns="http://www.w3.org/2000/svg" width="50px" viewBox="0 0 62 62" focusable="false">
 								<circle fill="#fff" cx="31" cy="31" r="30.002"></circle>
 								<path fill="#006341"
@@ -31,10 +31,12 @@
 							</svg>
 						</a>
 						<ul>
-							<!-- <li>MENU</li>
-							<li class="active">REWARDS</li>
-							<li>GIFT CARDS</li> -->
-							<li v-for="(page, i) in pages" :class="{active: activePage == i}">{{pages[i].page}}</li>
+							<li v-for="(page, i) in pages"
+								:class="{active: activePage == i}"
+								@click="setActivePage(i)"
+								>
+									{{pages[i].page}}
+							</li>
 						</ul>
 					</div>
 					<div class="right">
@@ -50,7 +52,12 @@
 				</nav>
 				<div class="nav_title">
 					<div class="container_full">
-						<div class="current_page">STARBUCKS REWARD</div>
+						<div class="current_page">
+							STARBUCKS {{pages[activePage].page}}
+						</div>
+							<button class="mobile_join btn" href="/join_app">
+								join in the app
+							</button>
 					</div>
 				</div>
 			</header>
@@ -59,12 +66,23 @@
 				<div class="hero_banner">
 					<div class="content container_full">
 						<h3>free coffee is a tap away</h3>
-						<div class="hero_subtitle">
+						<div class="hero_subtitle mobile">
 							Join now to start earning Rewards
 						</div>
 						<a href="" class="btn accent">Join now</a>
+						<a href="" class="btn accent mobile">Join in the app</a>
 						<div class="hero_subtitle">
-							Or <a href="https://www.starbucks.com/rewards/mobile-apps">Join in the app</a> for the best experience
+							Or 
+							<a href="https://www.starbucks.com/rewards/mobile-apps">
+								Join in the app
+							</a> 
+							for the best experience
+						</div>
+						<div class="hero_subtitle mobile d-none">
+							Or
+							<a href="https://www.starbucks.com/rewards/mobile-apps">
+								Join online
+							</a>
 						</div>
 					</div>
 				</div>

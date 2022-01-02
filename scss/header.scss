@@ -81,7 +81,6 @@ header {
 				.btn {
 					margin-right: $sp-2;
 					font-weight: 700;
-					border: 1px solid $accent-dark;
 				}
 				.btn.dark {
 					background-color: $accent-dark;
@@ -97,5 +96,24 @@ header {
 		color: $clear;
 		line-height: $height;
 		@include bottom_shadow;
+		.container_full {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.current_page {
+			text-transform: uppercase;
+			}
+			.mobile_join {
+				color: white;
+				border-color: white;
+				text-decoration: none;
+				font-size: .85rem;
+				font-weight: 700;
+				cursor: pointer;
+				&:hover {
+					background-color: rgba($color: $clear, $alpha: .1);
+				}
+			}
+		}
 	}
 }
