@@ -147,6 +147,40 @@
 				}
 			}
 		}
+		.earning {
+			.section_subtitle {
+				width: 100%;
+				// padding-inline: $sp-4;
+			}
+			.content {
+				.row {
+					flex-direction: column;
+					.level {
+						margin-bottom: $sp-5;
+						h4 {
+							margin-bottom: $sp-1;
+						}
+					}
+					.details {
+						flex-direction: column;
+						width: 100%;
+						.det {
+							flex-direction: row;
+							width: 100%;
+							margin-bottom: $sp-4;
+							img {
+								width: 15%;
+								margin-right: 5%;
+							}
+							.body {
+								width: 80%;
+							}
+						}
+					}
+				}
+				
+			}
+		}
 	}
 	*.mobile {
 		display: block;

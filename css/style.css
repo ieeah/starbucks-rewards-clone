@@ -833,6 +833,34 @@ footer .sub_footer .copyright {
   main .extras .content .step .card_body p {
     font-weight: 500;
   }
+  main .earning .section_subtitle {
+    width: 100%;
+  }
+  main .earning .content .row {
+    flex-direction: column;
+  }
+  main .earning .content .row .level {
+    margin-bottom: 35px;
+  }
+  main .earning .content .row .level h4 {
+    margin-bottom: 5px;
+  }
+  main .earning .content .row .details {
+    flex-direction: column;
+    width: 100%;
+  }
+  main .earning .content .row .details .det {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  main .earning .content .row .details .det img {
+    width: 15%;
+    margin-right: 5%;
+  }
+  main .earning .content .row .details .det .body {
+    width: 80%;
+  }
 
   *.mobile {
     display: block;
