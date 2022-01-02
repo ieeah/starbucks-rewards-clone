@@ -31,9 +31,10 @@
 							</svg>
 						</a>
 						<ul>
-							<li>MENU</li>
+							<!-- <li>MENU</li>
 							<li class="active">REWARDS</li>
-							<li>GIFT CARDS</li>
+							<li>GIFT CARDS</li> -->
+							<li v-for="(page, i) in pages" :class="{active: activePage == i}">{{pages[i].page}}</li>
 						</ul>
 					</div>
 					<div class="right">

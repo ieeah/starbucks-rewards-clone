@@ -1,6 +1,21 @@
 const app = new Vue({
 	el: '#app',
 	data: {
+		pages: [
+			{
+				page: 'menu',
+				url: '/menu',
+			},
+			{
+				page: 'rewards',
+				url: '/',
+			},
+			{
+				page: 'gift cards',
+				url: '/gift',
+			},
+		],
+		activePage: 1,
 		starInput: '',
 		codeOk: null,
 		carousel: [

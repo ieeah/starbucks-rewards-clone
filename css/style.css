@@ -167,6 +167,7 @@ header nav .left ul li {
   cursor: pointer;
   border-bottom: 7px solid transparent;
   margin-right: 20px;
+  text-transform: uppercase;
 }
 header nav .left ul li:hover {
   color: #00754a;
