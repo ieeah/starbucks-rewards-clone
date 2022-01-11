@@ -13,11 +13,14 @@ I tried being as accurate as possible, and I think it's kind of a good result, e
 
 I decided to put this page on Github just when I finished it for having it as a reference for me in the times to come, and maybe collecting some tips.
 
-### Responsiveness
 
-It's not responsive at this moment but I'll probably try to make it responsive in the next few days.
+#### Responsiveness
 
-### Code and CSS "cleanliness"
+I've started working to make this page responsive but I'm struggling a bit.
+It seems that some media queries aren't working at all.
+
+
+#### Code and CSS "cleanliness"
 
 I'm always been a "code cleanliness" supporter, but probably in this codebase I haven't been that clean, that's why I'm trying to use new features as SCSS (whit is mixins ecc ecc) so I'm kind of exploring many ways of doing things.
 
@@ -31,5 +34,6 @@ Some things that I'd like to improve / implement
 - improving the accuracy of sizes related to the original page
 - cleaning the code and refactoring where it's possible, reducing code repetitions.
 - **fixing the insert-code animation when the input:text get/lose the focus** *(any suggestion about this would really be appreciated)*.
+- Understanding why some media-queries aren't working **as if they don't exist at all.**
 
 ##### My name is Francesco, I'm from Italy and as you can clearly see, I'm a noob!
