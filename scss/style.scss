@@ -19,6 +19,40 @@ body {
 
 @import './header.scss';
 
+.nav_title {
+		$height: 50px;
+		height: $height;
+		background-color: $secondary-color;
+		color: $clear;
+		line-height: $height;
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		@include bottom_shadow;
+		.container_full {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.current_page {
+			text-transform: uppercase;
+			}
+			.mobile_join {
+				color: white;
+				border-color: white;
+				text-decoration: none;
+				font-size: .85rem;
+				font-weight: 700;
+				cursor: pointer;
+				&:hover {
+					background-color: rgba($color: $clear, $alpha: .1);
+				}
+			}
+		}
+}
+
 .hero_banner {
 	height: 800px;
 	background-color: $third-color;
@@ -149,9 +183,13 @@ body {
 		background-color: $third-color;
 		display: flex;
 		justify-content: center;
+		@include bottom_shadow;
 		.transition_container {
 			position: relative;
 			width: 600px;
+		}
+		.slider_container {
+			min-height: 250px;
 		}
 		.slider {
 			display: flex;
@@ -282,7 +320,7 @@ body {
 .codes {
 	padding-block: calc($sp-6 * 3);
 	.left_spacer {
-		width: 720px;
+		// width: 720px;
 		margin-left: calc((100% / 12) * 3.025);
 		.section_heading {
 			text-align: left;
@@ -370,6 +408,7 @@ body {
 				align-self: end;
 				font-size: 1rem;
 				font-weight: 600;
+				cursor: pointer;
 			}
 		} // stars_code end
 		.form_details {
@@ -422,9 +461,21 @@ footer {
 		display: flex;
 		.col {
 			width: calc(100% / 6);
+			.col_heading {
+				display: flex;
+				align-items: center;
+				pointer-events: none;
+				transition: .2s cubic-bezier(.89,.31,.37,.97);
+				&.active {
+					.icon {
+						transform: rotate(180deg);
+					}
+				}
+			}
 			.footer_heading {
 				font-size: 1.2rem;
 				font-weight: 500;
+				pointer-events: none;
 			}
 			.footer_ul {
 				margin-top: $sp-5;

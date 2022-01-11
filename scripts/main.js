@@ -16,6 +16,7 @@ const app = new Vue({
 			},
 		],
 		activePage: 1,
+		activeFAQ: null,
 		starInput: '',
 		codeOk: null,
 		carousel: [
@@ -104,114 +105,129 @@ const app = new Vue({
 			},
 		],
 		starCodes: ['12345', 'ABCDE', '1A2B3'],
-		footerLists: {
-			aboutUs: [
-				{
-					text: 'Our company',
-					url: 'https://www.starbucks.com/about-us/',
-				},
-				{
-					text: 'Our Coffee',
-					url: 'https://www.starbucks.com/coffee',
-				},
-				{
-					text: 'Stories and News',
-					url: 'https://stories.starbucks.com/',
-				},
-				{
-					text: 'Starbucks Archive',
-					url: 'https://archive.starbucks.com/',
-				},
-				{
-					text: 'Investor Relations',
-					url: 'https://investor.starbucks.com/',
-				},
-				{
-					text: 'Customer Service',
-					url: 'https://customerservice.starbucks.com/',
-				},
-			],
-			careers: [
-				{
-					text: 'Culture and Values',
-					url: 'https://www.starbucks.com/careers/working-at-starbucks/culture-and-values',
-				},
-				{
-					text: 'Inclusion. Diversity and Equity',
-					url: 'https://stories.starbucks.com/stories/equity-inclusion/',
-				},
-				{
-					text: 'College Achievement Plan',
-					url: 'https://www.starbucks.com/careers/working-at-starbucks/education',
-				},
-				{
-					text: 'Alumni Community',
-					url: 'https://alumni.starbucks.com/',
-				},
-				{
-					text: 'U.S. Carreers',
-					url: 'https://www.starbucks.com/careers/',
-				},
-				{
-					text: 'International Careers',
-					url: 'https://www.starbucks.com/careers/international-careers',
-				},
-			],
-			impact: [
-				{
-					text: 'People',
-					url: 'https://www.starbucks.com/responsibility/people',
-				},
-				{
-					text: 'Planet',
-					url: 'https://starbucks.com/responsibility/planet',
-				},
-				{
-					text: 'Enviromental and Social Impact Reporting',
-					url: 'https://www.starbucks.com/responsibility/reporting-hub',
-				},
-			],
-			partners: [
-				{
-					text: 'Landlord Support Center',
-					url: 'https://www.starbucks.com/business/landlord-faq',
-				},
-				{
-					text: 'Suppliers',
-					url: 'https://www.starbucks.com/business/suppliers',
-				},
-				{
-					text: 'Corporate Gift card Sales',
-					url: 'https://www.starbuckscardb2b.com/',
-				},
-				{
-					text: 'Office and Foodservice Coffee',
-					url: 'https://www.starbucks.com/business',
-				},
-			],
-			order: [
-				{
-					text: 'Order on the App',
-					url: 'https://www.starbucks.com/rewards/mobile-apps',
-				},
-				{
-					text: 'Order on the Web',
-					url: 'https://www.starbucks.com/menu',
-				},
-				{
-					text: 'Delivery',
-					url: 'https://delivery.starbucks.com/',
-				},
-				{
-					text: 'Order and Pickups Options',
-					url: 'https://www.starbucks.com/ways-to-order',
-				},
-				{
-					text: 'Explore and Find Coffee for Home',
-					url: 'https://athome.starbucks.com/?utm_source=starbucks.com&utm_medium=referral&utm_campaign=footer',
-				},
-			],
-		},
+		footerLists: [
+			{
+				title: 'About Us',
+				pages: [
+					{
+						text: 'Our company',
+						url: 'https://www.starbucks.com/about-us/',
+					},
+					{
+						text: 'Our Coffee',
+						url: 'https://www.starbucks.com/coffee',
+					},
+					{
+						text: 'Stories and News',
+						url: 'https://stories.starbucks.com/',
+					},
+					{
+						text: 'Starbucks Archive',
+						url: 'https://archive.starbucks.com/',
+					},
+					{
+						text: 'Investor Relations',
+						url: 'https://investor.starbucks.com/',
+					},
+					{
+						text: 'Customer Service',
+						url: 'https://customerservice.starbucks.com/',
+					},
+				],
+			},
+			{
+				title: 'Careers',
+				pages: [
+					{
+						text: 'Culture and Values',
+						url: 'https://www.starbucks.com/careers/working-at-starbucks/culture-and-values',
+					},
+					{
+						text: 'Inclusion. Diversity and Equity',
+						url: 'https://stories.starbucks.com/stories/equity-inclusion/',
+					},
+					{
+						text: 'College Achievement Plan',
+						url: 'https://www.starbucks.com/careers/working-at-starbucks/education',
+					},
+					{
+						text: 'Alumni Community',
+						url: 'https://alumni.starbucks.com/',
+					},
+					{
+						text: 'U.S. Carreers',
+						url: 'https://www.starbucks.com/careers/',
+					},
+					{
+						text: 'International Careers',
+						url: 'https://www.starbucks.com/careers/international-careers',
+					},
+				],
+			},
+			{
+				title: 'Social Impact',
+				pages: [
+					{
+						text: 'People',
+						url: 'https://www.starbucks.com/responsibility/people',
+					},
+					{
+						text: 'Planet',
+						url: 'https://starbucks.com/responsibility/planet',
+					},
+					{
+						text: 'Enviromental and Social Impact Reporting',
+						url: 'https://www.starbucks.com/responsibility/reporting-hub',
+					},
+				],
+			},
+			{
+				title: 'Business Partners',
+				pages: [
+					{
+						text: 'Landlord Support Center',
+						url: 'https://www.starbucks.com/business/landlord-faq',
+					},
+					{
+						text: 'Suppliers',
+						url: 'https://www.starbucks.com/business/suppliers',
+					},
+					{
+						text: 'Corporate Gift card Sales',
+						url: 'https://www.starbuckscardb2b.com/',
+					},
+					{
+						text: 'Office and Foodservice Coffee',
+						url: 'https://www.starbucks.com/business',
+					},
+				],
+			},
+			{
+				title: 'Order & Pickup',
+				pages: [
+					{
+						text: 'Order on the App',
+						url: 'https://www.starbucks.com/rewards/mobile-apps',
+					},
+					{
+						text: 'Order on the Web',
+						url: 'https://www.starbucks.com/menu',
+					},
+					{
+						text: 'Delivery',
+						url: 'https://delivery.starbucks.com/',
+					},
+					{
+						text: 'Order and Pickups Options',
+						url: 'https://www.starbucks.com/ways-to-order',
+					},
+					{
+						text: 'Explore and Find Coffee for Home',
+						url: 'https://athome.starbucks.com/?utm_source=starbucks.com&utm_medium=referral&utm_campaign=footer',
+					},
+				],
+			},
+		],
 		subFooterLists: [
 			[
 				{
@@ -291,6 +307,16 @@ const app = new Vue({
 		setActivePage(i) {
 			this.activePage = i;
 		},
+
+		setActiveFAQ(i) {
+			if (this.activeFAQ != i) {
+				this.activeFAQ = i;
+			} else {
+				this.activeFAQ = null;
+			}
+		},
+
+
 	},
 
 });
