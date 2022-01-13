@@ -60,7 +60,7 @@
 						<div class="current_page">
 							STARBUCKS© {{pages[activePage].page}}
 						</div>
-						<button class="mobile_join btn" href="/join_app">
+						<button class="mobile_none btn" href="/join_app">
 							join in the app
 						</button>
 					</div>
@@ -382,15 +382,15 @@
 			<footer>
 				<div class="footer_nav container_full">
 
-					<div v-for="(columns, i) in footerLists" class="col" :ref="`col`">
+					<div v-for="(columns, i) in footerLists" class="col">
 						<div class="col_heading" :class="{active: activeFAQ == i}" @click="setActiveFAQ(i)">
 							<h5 class="footer_heading">{{footerLists[i].title}}</h5>
 							<div class="icon">
-								<i class="fas fa-chevron-down mobile">
+								<i class="fas fa-chevron-down">
 								</i>
 							</div>
 						</div>
-						<ul class="footer_ul">
+						<ul class="footer_ul" :class="{active: activeFAQ == i}">
 							<li v-for="(faq, j) in footerLists[i].pages">
 								<a :href="footerLists[i].pages[j].url">
 									{{footerLists[i].pages[j].text}}
@@ -409,9 +409,10 @@
 						</a>
 					</div>
 					<div class="web_details">
-						<a v-for="(link, i) in subFooterLists[1]" :href="subFooterLists[0][i].url">
-							{{subFooterLists[1][i].text}}
-						</a>
+						<div class="a_wrapper" v-for="(link, i) in subFooterLists[1]" :href="subFooterLists[0][i].url">
+							<a href="">{{subFooterLists[1][i].text}}</a>
+							<span v-if="i != subFooterLists[1].length - 1">|</span>
+						</div>
 					</div>
 					<div class="copyright">
 						<p>

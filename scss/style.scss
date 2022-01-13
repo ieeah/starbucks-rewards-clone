@@ -39,7 +39,7 @@ body {
 			.current_page {
 			text-transform: uppercase;
 			}
-			.mobile_join {
+			.mobile_none {
 				color: white;
 				border-color: white;
 				text-decoration: none;
@@ -461,25 +461,32 @@ footer {
 		display: flex;
 		.col {
 			width: calc(100% / 6);
+			// border: 3px solid green;
 			.col_heading {
 				display: flex;
 				align-items: center;
-				pointer-events: none;
 				transition: .2s cubic-bezier(.89,.31,.37,.97);
+				
+				.icon {
+					display: none;
+				}
+				.footer_heading {
+					font-size: 1.2rem;
+					font-weight: 500;
+				}
 				&.active {
 					.icon {
 						transform: rotate(180deg);
 					}
 				}
 			}
-			.footer_heading {
-				font-size: 1.2rem;
-				font-weight: 500;
-				pointer-events: none;
-			}
+			
 			.footer_ul {
+				overflow: hidden;
+				height: auto;
 				margin-top: $sp-5;
 				padding-right: $sp-4;
+				transition: .25s ease-in-out;
 				li {
 					list-style: none;
 					margin-bottom: $sp-4;
@@ -526,16 +533,18 @@ footer {
 			}
 		}
 		.web_details {
-			a {
-				text-decoration: none;
-				color: $accent-dark;
-				margin-right: $sp-3;
-				&:not(:last-of-type)::after {
-					content: '|';
-					margin-left: $sp-3;
+			display: flex;
+			.a_wrapper {
+				a {
+					text-decoration: none;
+					color: $accent-dark;
+					margin-right: $sp-3;
+					&:hover {
+						text-decoration: underline;
+					}
 				}
-				&:hover {
-					text-decoration: underline;
+				span {
+					margin-right: $sp-3;
 				}
 			}
 		}
