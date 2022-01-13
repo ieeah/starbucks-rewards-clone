@@ -13,11 +13,9 @@ I tried being as accurate as possible, and I think it's kind of a good result, e
 
 I decided to put this page on Github just when I finished it for having it as a reference for me in the times to come, and maybe collecting some tips.
 
-
 #### Responsiveness
 
-I've started working to make this page responsive but I'm struggling a bit.
-It seems that some media queries aren't working at all.
+I have finished the mobile responsiveness, now I'll start working on the tablet and laptop one (since I did start from a 1920x1080 screen).
 
 
 #### Code and CSS "cleanliness"
@@ -28,12 +26,17 @@ PS: I'm not a big fan of css-utility-class, because it's definitely true that ke
 
 ## ToDo List
 
-Some things that I'd like to improve / implement
+Some things that I'd like to improve / implement and I have some clue on how doing it.
 
-- Responsiveness (as already told)
-- improving the accuracy of sizes related to the original page
+- Responsiveness (for tablets and laptop screens)
+- improving the accuracy of sizes related to the original page. i.e (the input bar on large screens is too large)
 - cleaning the code and refactoring where it's possible, reducing code repetitions.
+- The submit button is not linked to the input and I need to prevent the default event behaviour when clicked.
+
+
+### known issues
 - **fixing the insert-code animation when the input:text get/lose the focus** *(any suggestion about this would really be appreciated)*.
-- Understanding why some media-queries aren't working **as if they don't exist at all.**
+- For some reason, that probably I'll never understand, the opacity transition on the "reedem carousel" has stopped working, now the image change suddenly and with no fade-in-out.
+- I had to put some fixed heights for every single accordeon-FAQ-section (on mobile) to make it transition from 0 to is height, and not make it just suddenly switch from o to 100%.
 
 ##### My name is Francesco, I'm from Italy and as you can clearly see, I'm a noob!
