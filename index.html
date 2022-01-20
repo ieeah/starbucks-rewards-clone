@@ -110,9 +110,9 @@
 							for the best experience
 						</div>
 						<div class="hero_subtitle mobile">
-							Or
+							Or 
 							<a href="https://www.starbucks.com/rewards/mobile-apps">
-								Join online
+								<span>Join online</span>
 							</a>
 						</div>
 					</div>
@@ -129,14 +129,14 @@
 						<div class="step">
 							<div class="list_number">1</div>
 							<div class="card_body">
-								<h5>Create an account</h5>
-								<h5 class="mobile">Download the Starbucks app</h5>
-								<p>
+								<h5 v-if="screenWidth > 780">Create an account</h5>
+								<h5 v-if="screenWidth < 780">Download the Starbucks app</h5>
+								<p v-if="screenWidth > 780">
 									To get started, <a href="" target="_blank">join now</a>. You can also <a href=""
 										target="_blank">join in the App</a> to get access to the full range of starbucks Rewards
 									benefits
 								</p>
-								<p class="mobile">
+								<p v-if="screenWidth < 780">
 									<a href="https://starbucks.app.link/VLa2I3inh9">
 										Join in the app
 									</a> 
@@ -149,8 +149,8 @@
 						<div class="step">
 							<div class="list_number">2</div>
 							<div class="card_body">
-								<h5 class="mobile">Order and pay how you'd like</h5>
-								<p class="mobile">
+								<h5>Order and pay how you'd like</h5>
+								<p>
 									Use cash, credit/debit card or save some time and pay right trough the app. You'll collect Stars
 									all ways. <a href="" target="_blank">Learn how</a>
 								</p>
@@ -159,8 +159,8 @@
 						<div class="step">
 							<div class="list_number">3</div>
 							<div class="card_body">
-								<h5 class="mobile">Earn Stars, get Rewards</h5>
-								<p class="mobile">
+								<h5>Earn Stars, get Rewards</h5>
+								<p>
 									As you earn Stars, you can redeem them for Rewards--like free food, drinks and more. Start
 									redeeming with as little as 25 Stars!
 								</p>

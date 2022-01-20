@@ -91,15 +91,9 @@
 						margin-left: $sp-5;
 						h5 {
 							font-size: 1rem;
-							&:not(.mobile) {
-								display: none;
-							}
 						}
 						p {
 							font-weight: 500;
-							&:not(.mobile) {
-								display: none;
-							}
 						}
 					}
 				}
@@ -276,6 +270,9 @@
 			}
 		}
 	}
+	.mobile{
+	display: flex;
+	}
 }
 
 
@@ -308,8 +305,3 @@
 }
 
 //tablet
-
-
-.mobile{
-	display: flex;
-}

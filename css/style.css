@@ -902,14 +902,8 @@ header nav .right .cta {
   main .getting_started .content .step .card_body h5 {
     font-size: 1rem;
   }
-  main .getting_started .content .step .card_body h5:not(.mobile) {
-    display: none;
-  }
   main .getting_started .content .step .card_body p {
     font-weight: 500;
-  }
-  main .getting_started .content .step .card_body p:not(.mobile) {
-    display: none;
   }
   main .redeem .select_reward {
     width: 100%;
@@ -1068,6 +1062,10 @@ header nav .right .cta {
   footer .web_details .a_wrapper span {
     display: none;
   }
+
+  .mobile {
+    display: flex;
+  }
 }
 @media screen and (max-width: 1280px) {
   header .left .brand_logo {
@@ -1086,9 +1084,6 @@ header nav .right .cta {
   header .mobile_none {
     display: none;
   }
-}
-.mobile {
-  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
