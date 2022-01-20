@@ -19,6 +19,8 @@ const app = new Vue({
 		activeFAQ: null,
 		starInput: '',
 		codeOk: null,
+		mobileMenu: false,
+		screenWidth: window.innerWidth,
 		carousel: [
 			{
 				points: 25,
@@ -275,7 +277,13 @@ const app = new Vue({
 			],
 		],
 	},
+	created() {
+		window.addEventListener('resize', e => {
+			this.screenWidth = window.innerWidth;
+		});
+	},
 	methods: {
+
 		selectActiveSlide(i) {
 			this.active_carousel = i;
 		},
@@ -316,7 +324,13 @@ const app = new Vue({
 			}
 		},
 
+		mobileTrue() {
+			this.mobileMenu = !this.mobileMenu;
+		},
 
+		closeMobileNav() {
+			this.mobileMenu = false;
+		},
 	},
 
 });

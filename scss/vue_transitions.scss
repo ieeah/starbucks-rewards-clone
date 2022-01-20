@@ -1,9 +1,11 @@
 // transitions to the redeem reward carousel
 
-.carousel-fade-enter-active, .carousel-fade-leave-active {
+.carousel-fade-enter-active,
+.carousel-fade-leave-active {
 	transition: opacity .25s;
 }
-.carousel-fade-enter, .carousel-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.carousel-fade-enter,
+.carousel-fade-leave-to {
 	opacity: 0;
 }
 
@@ -47,5 +49,18 @@
 		top: -22%;
 		left: 2.5%;
 		font-size: 1rem;
+	}
+}
+
+@mixin circleAnimation {
+	transition: .15s linear;
+	cursor: pointer;
+	$size: 33px;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	&:hover {
+		background-color: $fifth-color;
+		box-shadow: 0 0 0 $sp-1 $fifth-color;
 	}
 }

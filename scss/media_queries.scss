@@ -1,5 +1,5 @@
 // mobile
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 779px) {
 	header {
 		.left {
 			.brand_logo {
@@ -16,6 +16,32 @@
 			.current_page {
 				font-size: .85rem;
 				letter-spacing: 1px;
+			}
+		}
+
+		nav {
+			.left {
+				ul {
+					display: none;
+				}
+			}
+			.right {
+				.locator,
+				.cta {
+					display: none;
+				}
+				i {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+		.mobile_nav {
+			.more_links {
+				.close {
+					display: none;
+				}
 			}
 		}
 	}
@@ -87,25 +113,18 @@
 				}
 			}
 			.carousel {
-				padding-block: 0;
-			}
-			.transition_container {
+				.transition_container {
 				width: 100%;
-				height: 600px;
 				.slider {
 					width: 100%;
 					flex-direction: column;
 					.poster {
 						width: 100%;
 						margin-bottom: $sp-6;
-						img {
-							height: 70%;
-							margin-inline: auto;
-						}
 					}
 					.details {
 						text-align: center;
-						width: 100%;
+						width: 80%;
 						h4 {
 							font-size: 1.05rem;
 						}
@@ -115,6 +134,7 @@
 						}
 					}
 				}
+			}
 			}
 		}
 		.extras {
@@ -185,6 +205,9 @@
 			.left_spacer {
 				margin-inline: $sp-2;
 			}
+			#code_input {
+				width: 100%;
+			}
 		}
 		.terms {
 			.container {
@@ -214,19 +237,10 @@
 					justify-content: space-between;
 					cursor: pointer;
 					.icon {
+						@include circleAnimation;
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						transition: .15s linear;
-						cursor: pointer;
-						$size: 33px;
-						width: $size;
-						height: $size;
-						border-radius: 50%;
-						&:hover {
-							background-color: $fifth-color;
-							box-shadow: 0 0 0 $sp-1 $fifth-color;
-						}
 					}
 				}
 
@@ -262,10 +276,6 @@
 			}
 		}
 	}
-	*.mobile {
-		display: block;
-	}
-
 }
 
 
@@ -300,3 +310,6 @@
 //tablet
 
 
+.mobile{
+	display: flex;
+}
