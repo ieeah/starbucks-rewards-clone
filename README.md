@@ -22,20 +22,20 @@ I decided to put this page on Github just when I finished it for having it as a 
 
 #### Responsiveness
 
-I have finished the mobile responsiveness, now I'll start working on the tablet and laptop one (since I did start from a 1920x1080 screen).
+After not a few problems, I've done the responsiveness of this page and I have to admit that I'm pretty happy of the result.
+(** in some wrapper sizes or other detail here and there my version differs a lot from the original. But I did it on purpose due to my aesthetic sense, I mean, this is not for a real job**)
 
 #### Code and CSS "cleanliness"
 
-I'm always been a "code cleanliness" supporter, but probably in this codebase I haven't been that clean, that's why I'm trying to use new features as SCSS (whit is mixins ecc ecc) so I'm kind of exploring many ways of doing things.
-
-PS: I'm not a big fan of css-utility-class, because it's definitely true that keep the css code clean, but it's also true that dirties the html code; And also logically, i think it's better to have one unique place where finding the css of an element, instead of going around trough different sections of different scss files.
+I do like to try coding clean.
+But this time I did a mess LOL. I tried some new stuff, I haven't used any utility-class (that's on purpose) and I haven't focused that much as I usually try to do.
+Forgive me.
 
 ## ToDo List
 
 Some things that I'd like to improve / implement and I have some clue on how doing it.
+(this are not urgent, and I'll fix them if / when I'll have some spare time)
 
-- Responsiveness
-  - I've done the mobile version, I do miss tablet and Laptop ones (I did it on a 1920x1080 screen, so for some screens it could be too big).
 - improving the accuracy of sizes related to the original page.
 - cleaning the code and refactoring where it's possible, reducing code repetitions.
 - I had to put some fixed heights for every single accordeon-FAQ-section (on mobile) to make it transition from 0 to is height, and not make it just suddenly switch from o to 100%.
@@ -45,7 +45,6 @@ Some things that I'd like to improve / implement and I have some clue on how doi
 
 ###### Things that I know aren't working properly but I have no idea why or what to do
 
-- fixing the insert-code animation when the input:text get/lose the focus *(any suggestion about this would really be appreciated)*.
 - I Haven't been able to make the mobile navigation close automatically when the size of the screen is bigger than 780px *(any suggestion about this would really be appreciated)*.
 - For some reason, that probably I'll never understand, the opacity transition on the "reedem carousel" has stopped working, now the image change suddenly and with no fade-in-out.
 

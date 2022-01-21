@@ -102,7 +102,7 @@ header {
 		left: 100%;
 		z-index: 3;
 		padding-inline: $sp-5;
-		transition: transform .2s ease-in-out;
+		transition: all .35s cubic-bezier(.66,.03,.73,1.05);
 		&.active {
 			left: 25%;
 		}

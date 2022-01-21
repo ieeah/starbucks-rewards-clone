@@ -1,5 +1,41 @@
 // mobile
-@media screen and (max-width: 779px) {
+
+
+
+@media screen and (max-width: 1269px) {
+	header {
+		.left {
+			.brand_logo {
+				left: 10px;
+			}
+			ul {
+				margin-left: 100px;
+			}
+		}
+	}
+	//utilities
+	.container_full {
+	width: 97%;
+	margin-inline: auto;
+	}
+
+	main {
+		.redeem {
+			.carousel {
+				.poster img {
+					width: 150%;
+				}
+			}
+		}
+		.codes {
+			.left_spacer {
+				margin-inline: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
 	header {
 		.left {
 			.brand_logo {
@@ -47,10 +83,11 @@
 	}
 	main {
 		.hero_banner {
-			padding-block: 200px calc(160vh - 350px);
-			background-position: 63% 750px;
+			padding-top: 50px;
+			background-position: 63% 400px;
 			background-repeat: no-repeat;
 			background-size: 250%;
+			height: 630px;
 			.content {
 				height: fit-content;
 				text-align: center;
@@ -200,7 +237,7 @@
 				margin-inline: $sp-2;
 			}
 			#code_input {
-				width: 100%;
+				// width: 100%;
 			}
 		}
 		.terms {
@@ -272,25 +309,6 @@
 	}
 	.mobile{
 	display: flex;
-	}
-}
-
-
-@media screen and (max-width: 1280px) {
-	header {
-		.left {
-			.brand_logo {
-				left: 10px;
-			}
-			ul {
-				margin-left: 100px;
-			}
-		}
-	}
-	//utilities
-	.container_full {
-	width: 97%;
-	margin-inline: auto;
 	}
 }
 

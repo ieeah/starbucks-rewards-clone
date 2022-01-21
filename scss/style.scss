@@ -318,8 +318,8 @@ body {
 .codes {
 	padding-block: calc($sp-6 * 3);
 	.left_spacer {
-		// width: 720px;
-		margin-left: calc((100% / 12) * 3.025);
+		max-width: 770px;
+		margin-left: 20%;
 		.section_heading {
 			text-align: left;
 			justify-content: start;
@@ -338,8 +338,9 @@ body {
 			.input_wrapper {
 				margin-bottom: $sp-6;
 				position: relative;
+				min-height: 82px;
 				input {
-					width: 55%;
+					width: 100%;
 					border: 1px solid $accent-dark;
 					padding: $sp-3 $sp-2;
 					border-radius: $sp-2;
@@ -349,18 +350,18 @@ body {
 						outline: none;
 					}
 					&:focus~.action_msg {
-						animation: action_msg .5s ease-out forwards;
+						transform: translate(15px, -65px);
+						font-size: 1rem;
 					}
 				}
 				.action_msg {
-					position: absolute;
-					top: 22%;
-					left: 2.5%;
+					transform: translate(15px, -41px);
 					font-size: 1.3rem;
 					background-color: $clear;
 					padding-inline: $sp-1;
+					width: fit-content;
 					pointer-events: none;
-					animation: action_msg .6s ease-in reverse forwards;
+					transition: all .25s cubic-bezier(1,0,.69,.68);
 				}
 				.outcome {
 					.outcome_msg::after {
