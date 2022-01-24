@@ -4,21 +4,20 @@
 
 I'm a newbie/still-studying developer and I need some practice to do, aside of the bootcamp i'm already participating in, so...
 
-Since I'm having some new year's holidays i thought to keep practicing with web development cloning [this beautiful page](https://www.starbucks.com/rewards "the original starbuck's page") from the Starbuck's website.<br>
+Since I had some new year's holidays i thought to keep practicing cloning [this beautiful page](https://www.starbucks.com/rewards "the original starbuck's page") from the Starbuck's website.<br>
 
 I tried being as accurate as possible, and I think it's kind of a good result, even if it differs a bit in some containers width and some animations.<br>
 *and probably something more*.
 
 ```
-NOTICE: I deliberately decided not to use any framework for css, not even for responsiveness,
-to increase the challenge and to practice with an "harder css" (and media queries).
+NOTICE: I deliberately decided not to use any framework for css (not even for responsiveness) to increase the challenge and to practice with an "harder css" (and media queries).
 However, I opted for the use of scss, because it's okay to want to challenge yourself
 but we must not exaggerate haha
 ```
 
 ## Actual State
 
-I decided to put this page on Github just when I finished it for having it as a reference for me in the times to come, and maybe collecting some tips.
+I decided to put this page on Github to have a reference for me in the times to come, and maybe collecting some tips.
 
 #### Responsiveness
 
@@ -28,7 +27,8 @@ After not a few problems, I've done the responsiveness of this page and I have t
 #### Code and CSS "cleanliness"
 
 I do like to try coding clean.
-But this time I did a mess LOL. I tried some new stuff, I haven't used any utility-class (that's on purpose) and I haven't focused that much as I usually try to do.
+But this time I did a mess LOL.
+I tried some new stuff, I haven't used any utility-class (that's on purpose) and I haven't focused that much as I usually try to do.
 Forgive me.
 
 ## ToDo List
@@ -46,8 +46,6 @@ Some things that I'd like to improve / implement and I have some clue on how doi
 ###### Things that I know aren't working properly but I have no idea why or what to do
 
 - I Haven't been able to make the mobile navigation close automatically when the size of the screen is bigger than 780px *(any suggestion about this would really be appreciated)*.
-- For some reason, that probably I'll never understand, the opacity transition on the "reedem carousel" has stopped working, now the image change suddenly and with no fade-in-out.
-
 
 ##### My name is Francesco, I'm from Italy and as you can clearly see, I'm a noob!
 

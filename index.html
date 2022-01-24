@@ -173,25 +173,17 @@
 					<div class="select_reward">
 						<h4>Get your favorites for free</h4>
 						<ul class="rewards">
-							<li class="item" :class="{active: active_carousel == i}" v-for="(item, i) in carousel" @click="selectActiveSlide(i)">{{carousel[i].points}} <span>&#9733;</span></li>
+							<li class="item"
+								:class="{active: active_carousel == i}"
+								v-for="(item, i) in carousel"
+								@click="selectActiveSlide(i), moveRewardsIndicator()"
+								>
+									{{carousel[i].points}} <span>&#9733;</span>
+							</li>
+							<div id="indicator" ref="indicator"></div>
 						</ul>
 					</div>
 					<div class="carousel">
-						<!-- <div class="slider_container" key="container">
-							<div v-for="(item, i) in carousel"
-								class="slider"
-								:class="{visible: active_carousel === i, hidden: active_carousel !== i}"
-								:key="`slide_${i}`"
-								>
-								<div class="poster">
-									<img :src="carousel[i].img" alt="">
-								</div>
-								<div class="details">
-									<h4>{{carousel[active_carousel].title}}</h4>
-									<p>{{carousel[active_carousel].text}}</p>
-								</div>
-							</div>
-						</div> -->
 						<div class="slides_container">
 							<div class="slide" v-for="(item, i) in carousel"
 								:class="{visible: active_carousel === i, hidden: active_carousel !== i}"

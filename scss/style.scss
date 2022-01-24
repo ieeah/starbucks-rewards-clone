@@ -156,24 +156,32 @@ body {
 		ul.rewards {
 			display: flex;
 			width: 550px;
+			position: relative;
 			li.item {
 				list-style-type: none;
 				font-weight: 600;
 				font-size: 1.6rem;
 				padding-block: $sp-6 $sp-4;
-				border-bottom: 7px solid transparent;
 				width: 20%;
 				text-align: center;
 				color: $accent-dark;
 				cursor: pointer;
 				&.active {
-					border-bottom: 7px solid $accent;
 					cursor: default;
 				}
 				span {
 					color: $accent-yellow;
 					font-size: .75em;
 				}
+			}
+			#indicator {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 20%;
+				height: 7px;
+				background-color: $accent;
+				transition: all .25s cubic-bezier(.55,.09,.68,.53);
 			}
 		}
 	}

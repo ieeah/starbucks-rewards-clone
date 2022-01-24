@@ -443,25 +443,33 @@ header .mobile_nav .more_links .close i {
 .redeem .select_reward ul.rewards {
   display: flex;
   width: 550px;
+  position: relative;
 }
 .redeem .select_reward ul.rewards li.item {
   list-style-type: none;
   font-weight: 600;
   font-size: 1.6rem;
   padding-block: 40px 20px;
-  border-bottom: 7px solid transparent;
   width: 20%;
   text-align: center;
   color: black;
   cursor: pointer;
 }
 .redeem .select_reward ul.rewards li.item.active {
-  border-bottom: 7px solid #00754a;
   cursor: default;
 }
 .redeem .select_reward ul.rewards li.item span {
   color: #dbb97b;
   font-size: 0.75em;
+}
+.redeem .select_reward ul.rewards #indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: 7px;
+  background-color: #00754a;
+  transition: all 0.25s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 }
 .redeem .carousel {
   width: 100%;

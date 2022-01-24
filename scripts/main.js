@@ -331,6 +331,11 @@ const app = new Vue({
 		closeMobileNav() {
 			this.mobileMenu = false;
 		},
+		
+		moveRewardsIndicator() {
+			let size = 20 * this.active_carousel;
+			this.$refs.indicator.style = `left: ${size}%`;
+		}
 	},
 
 });
