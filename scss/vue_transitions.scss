@@ -1,11 +1,10 @@
 // transitions to the redeem reward carousel
 
-.carousel-fade-enter-active,
-.carousel-fade-leave-active {
+.carousel-fade-enter-active{
 	transition: opacity .25s;
 }
-.carousel-fade-enter,
-.carousel-fade-leave-to {
+
+.carousel-fade-leave-active {
 	opacity: 0;
 }
 
@@ -47,4 +46,12 @@
 		background-color: $fifth-color;
 		box-shadow: 0 0 0 $sp-1 $fifth-color;
 	}
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
 }

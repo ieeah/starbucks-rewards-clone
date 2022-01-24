@@ -35,6 +35,26 @@
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.carousel .slider_container .slider {
+		.poster,
+		.details {
+			width: 30%;
+		}
+	}
+}
+
+// TODO capirci qualcosa con ste positions
+
+@media screen and (max-width: 1300px) {
+	.carousel .slider_container .slider {
+		.poster,
+		.details {
+			width: 50%;
+		}
+	}
+}
+
 @media screen and (max-width: 767px) {
 	header {
 		.left {
@@ -144,28 +164,30 @@
 				}
 			}
 			.carousel {
-				.transition_container {
-				width: 100%;
-				.slider {
-					width: 100%;
+				height: 500px;
+				.slides_container {
 					flex-direction: column;
-					.poster {
+					align-items: center;
+					justify-content: center;
+					.slide {
+						flex-direction: column;
 						width: 100%;
-						margin-bottom: $sp-6;
-					}
-					.details {
-						text-align: center;
-						width: 80%;
-						h4 {
-							font-size: 1.05rem;
+						.cover {
+							width: 100%;
 						}
-						p {
-							width: 97%;
-							font-size: .9rem;
+						.details {
+							max-width: 800px;
+							margin-inline: auto;
+							align-items: center;
+							text-align: center;
+							margin-top: $sp-6;
+							p {
+								margin-top: $sp-2;
+								width: 600px;
+							}
 						}
 					}
 				}
-			}
 			}
 		}
 		.extras {
@@ -235,9 +257,6 @@
 		.codes {
 			.left_spacer {
 				margin-inline: $sp-2;
-			}
-			#code_input {
-				// width: 100%;
 			}
 		}
 		.terms {
@@ -311,6 +330,7 @@
 	display: flex;
 	}
 }
+
 
 @media screen and (min-width: 768px) {
 	header {

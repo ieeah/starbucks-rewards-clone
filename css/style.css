@@ -70,13 +70,11 @@ a {
   font-weight: 500;
 }
 
-.carousel-fade-enter-active,
-.carousel-fade-leave-active {
+.carousel-fade-enter-active {
   transition: opacity 0.25s;
 }
 
-.carousel-fade-enter,
-.carousel-fade-leave-to {
+.carousel-fade-leave-active {
   opacity: 0;
 }
 
@@ -102,6 +100,14 @@ a {
     background-color: transparent;
   }
 }
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 *,
 *::before,
 *::after {
@@ -465,40 +471,40 @@ header .mobile_nav .more_links .close i {
   justify-content: center;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
-.redeem .carousel .transition_container {
-  width: 50%;
-}
-.redeem .carousel .slider {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.redeem .carousel .slider .fade {
-  transition: opacity 0.2s ease-in-out;
-}
-.redeem .carousel .slider .poster,
-.redeem .carousel .slider .details {
-  width: 50%;
-}
-.redeem .carousel .slider .poster {
-  display: flex;
-  justify-content: flex-start;
-  margin-right: 5px;
-}
-.redeem .carousel .slider .poster img {
+.redeem .carousel .slides_container {
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: 250px;
+  position: relative;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.redeem .carousel .slider .details {
-  margin-left: 5px;
+.redeem .carousel .slides_container .slide {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  margin-inline: auto;
+  transition: all 0.2s;
 }
-.redeem .carousel .slider .details h4 {
-  margin-bottom: 15px;
+.redeem .carousel .slides_container .slide .cover {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.redeem .carousel .slider .details p {
-  font-weight: 600;
-  font-size: 0.9rem;
+.redeem .carousel .slides_container .slide .cover img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.redeem .carousel .slides_container .slide .details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .extras {
@@ -829,6 +835,18 @@ footer .sub_footer .copyright {
     margin-inline: auto;
   }
 }
+@media screen and (max-width: 900px) {
+  .carousel .slider_container .slider .poster,
+.carousel .slider_container .slider .details {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .carousel .slider_container .slider .poster,
+.carousel .slider_container .slider .details {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 767px) {
   header .left .brand_logo {
     left: 10px;
@@ -919,27 +937,31 @@ header nav .right .cta {
   main .redeem .select_reward .rewards {
     width: 100%;
   }
-  main .redeem .carousel .transition_container {
-    width: 100%;
+  main .redeem .carousel {
+    height: 500px;
   }
-  main .redeem .carousel .transition_container .slider {
-    width: 100%;
+  main .redeem .carousel .slides_container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  main .redeem .carousel .transition_container .slider .poster {
+  main .redeem .carousel .slides_container .slide {
+    flex-direction: column;
     width: 100%;
-    margin-bottom: 40px;
   }
-  main .redeem .carousel .transition_container .slider .details {
+  main .redeem .carousel .slides_container .slide .cover {
+    width: 100%;
+  }
+  main .redeem .carousel .slides_container .slide .details {
+    max-width: 800px;
+    margin-inline: auto;
+    align-items: center;
     text-align: center;
-    width: 80%;
+    margin-top: 40px;
   }
-  main .redeem .carousel .transition_container .slider .details h4 {
-    font-size: 1.05rem;
-  }
-  main .redeem .carousel .transition_container .slider .details p {
-    width: 97%;
-    font-size: 0.9rem;
+  main .redeem .carousel .slides_container .slide .details p {
+    margin-top: 10px;
+    width: 600px;
   }
   main .extras {
     padding-block: 35px;
