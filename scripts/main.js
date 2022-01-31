@@ -310,6 +310,7 @@ const app = new Vue({
 				this.codeOk = null;
 				document.activeElement.blur();
 			} ,2000);
+			
 		},
 
 		setActivePage(i) {

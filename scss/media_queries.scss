@@ -177,13 +177,14 @@
 						}
 						.details {
 							max-width: 800px;
+							min-width: 400px;
 							margin-inline: auto;
 							align-items: center;
 							text-align: center;
 							margin-top: $sp-6;
 							p {
 								margin-top: $sp-2;
-								width: 600px;
+								// width: 100%;
 							}
 						}
 					}

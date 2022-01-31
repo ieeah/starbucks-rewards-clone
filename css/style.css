@@ -962,6 +962,7 @@ header nav .right .cta {
   }
   main .redeem .carousel .slides_container .slide .details {
     max-width: 800px;
+    min-width: 400px;
     margin-inline: auto;
     align-items: center;
     text-align: center;
@@ -969,7 +970,6 @@ header nav .right .cta {
   }
   main .redeem .carousel .slides_container .slide .details p {
     margin-top: 10px;
-    width: 600px;
   }
   main .extras {
     padding-block: 35px;
